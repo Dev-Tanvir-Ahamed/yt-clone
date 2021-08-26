@@ -1,0 +1,68 @@
+@import "../../base";
+
+.header {
+  display: flex;
+  height: 12vh;
+  align-items: center;
+  .header__menu {
+    flex-basis: 7rem;
+    cursor: pointer;
+  }
+  .header__logo {
+    height: 5rem;
+    width: auto;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  .avatar__logo {
+    height: 30px;
+    width: auto;
+    flex-basis: 100px;
+  }
+  .search_form {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    input {
+      width: 30rem;
+      border-radius: 0.2rem;
+      background: transparent;
+      border: 2px solid #c6c6c6;
+      &::placeholder {
+        padding-left: 1rem;
+        color: #c6c6c6;
+        font-weight: 700;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    .search__btn {
+      width: 8rem;
+      border: 1px solid #c6c6c6;
+      margin-right: 1rem;
+    }
+    .search__voice {
+      border: none;
+      background: none;
+    }
+  }
+  .header__icons Button {
+    border: none;
+    background: none;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  .header {
+    .search_form {
+      flex: 1;
+      input {
+        width: 15rem;
+      }
+    }
+    .header__icons > *:not(.avatar__logo) {
+      display: none;
+    }
+  }
+}
